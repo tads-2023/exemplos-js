@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <main>
+        <div>
+            <button id="teste">TEste</button>
+            <form action="">
+                <div>
+                    <div>
+                        <label for="bill">Bill</label>
+                        <input type="text" name="bill" id="bill">
+                    </div>
+
+                    <div>
+                        <button class="tip-value" data-tip="5" id="tip_5">5%</button>
+                        <button class="tip-value" data-tip="10" id="tip_10">10%</button>
+                        <button class="tip-value" data-tip="15" id="tip_15">15%</button>
+                        <button class="tip-value" data-tip="20" id="tip_20">20%</button>
+                        <button class="tip-value" data-tip="25" id="tip_25">25%</button>
+                        </div>
+                    
+                    <div>
+                        <label for="people">Number of people</label>
+                        <input type="text" name="people" id="people">
+                    </div>
+                </div>
+
+                <div id="app">
+                   
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="./Tip.js"></script>
+    <script src="./TipView.js"></script>
+    <script src="./TipController.js"></script>
+    
+    <script>
+        let controller = new TipController();
+    </script>
+
+</body>
+</html>

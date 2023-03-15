@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+        </div>
+        <div>
+            <label for="endereco">Endereço</label>
+            <input type="text" name="endereco" id="endereco">
+        </div>
+        <div>
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf">
+        </div>
+        <button>Adicionar</button>
+    </form>
+
+    <table>
+        <thead>
+            <th>Nome</th>
+            <th>Endereco</th>
+            <th>CPF</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Diogo Soares</td>
+                <td>Algum luygar distante</td>
+                <td>000.000.000-20</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let form = document.querySelector("form");
+        let trigger = (e) => {
+            e.preventDefault();
+            let nome = document.querySelector("#nome").value;
+            let endereco = document.querySelector("#endereco").value;
+            let cpf = document.querySelector("#cpf").value;
+
+            let template = `<tr>
+                <td>${nome}</td>
+                <td>${endereco}</td>
+                <td>${cpf}</td>
+            </tr>`;
+
+            let tabela = document.querySelector("tbody");
+            tabela.innerHTML = tabela.innerHTML + template;
+        };
+
+        form.addEventListener('submit', trigger);
+    </script>
+</body>
+</html>
