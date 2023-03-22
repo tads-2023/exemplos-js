@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes populares</title>
+
+    <style>
+        body {
+            background-color: azure;
+        }
+        .movies {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .movie {
+            position: relative;
+            border-radius: 8px;
+            max-width: 220px;
+            overflow: hidden;
+            background-color: white;
+            border: solid rgb(201, 201, 201) 1px;
+        }
+
+        .description {
+            padding: 8px 12px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        span {
+            color: #777;
+        }
+
+        .score {
+            border-radius: 100%;
+            background-color: black;
+            width: 34px;
+            height: 34px;
+            position: absolute;
+            top: 314px;
+            left: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .score span {
+            font-weight: 700;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Popular Movies</h1>
+    <div class="container">
+        <div id="content" class="movies">
+           
+        </div>
+    </div>
+
+    <script src="js/Movie.js"></script>
+    <script src="js/MovieView.js"></script>
+    <script src="js/MovieRepository.js"></script>
+    <script src="js/MoviesController.js"></script>
+
+    <script>
+        let controller = new MoviesController();
+    </script>
+    
+</body>
+</html>
