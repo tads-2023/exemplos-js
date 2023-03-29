@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Advice generator app</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    main {
+      background-color: hsl(217, 19%, 24%);
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 360px;
+      height: 240px;
+      background-color: hsl(217, 19%, 38%);
+      border-radius: 12px;
+      text-align: center;
+      padding: 8px;
+      position: relative;
+    }
+
+    .advice-number {
+      font-size: 14px;
+      color: hsl(150, 100%, 66%);
+      font-weight: 600;
+      display: block;
+      margin: 20px 0;
+    }
+
+    .advice {
+      font-size: 28px;
+      color: hsl(193, 38%, 86%);
+      font-weight: 600;
+      display: block;
+    }
+
+    .separator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 0;
+    }
+
+    .divisor {
+      flex: 1;
+      margin: 8px;
+      height: 1px;
+      background-color: hsl(193, 38%, 86%);
+    }
+
+    .aspas::after {
+      margin: 0 2px;
+      border-radius: 2px;
+      display: block;
+      content: '';
+      height: 12px;
+      width: 4px;
+      background-color: hsl(193, 38%, 86%);
+    }
+
+    .button-advisor {
+      position: absolute;
+      bottom: -30px;
+      left: calc(50% - 30px);
+      height: 60px;
+      width: 60px;
+      border-radius: 100%;
+      background-color: hsl(150, 100%, 66%);
+    }
+
+    .button-advisor:hover {
+      box-shadow: 0 0 48px hsl(150, 100%, 66%);
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div id="content">
+
+      </div>
+      <div class="separator">
+        <div class="divisor"></div>
+        <span class="aspas"></span>
+        <span class="aspas"></span>
+        <div class="divisor"></div>
+      </div>
+      <button id="botao" class="button-advisor">
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="#202733"/></svg>
+      </button>
+    </div>
+  </main>
+  
+  <script src="js/Advice.js"></script>
+  <script src="js/AdviceView.js"></script>
+  <script src="js/AdviceController.js"></script>
+  <script>
+    let controller = new AdviceController();
+  </script>
+
+</body>
+</html>
