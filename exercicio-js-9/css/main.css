@@ -1,0 +1,83 @@
+.bg-body-tertiary {
+    background-color: white !important;
+}
+
+.nav-link {
+    font-weight: 900;
+    font-size: 16px;
+    color: hsl(0, 0%, 75%);
+}
+
+.btn {
+    font-weight: 900;
+    color: hsl(0, 0%, 75%);
+}
+
+.btn-primary {
+    --bs-btn-bg: #2acfcf;
+    --bs-btn-border-color: #2acfcf;
+    --bs-btn-hover-bg: #25baba;
+    --bs-btn-hover-border-color: #25baba;
+    --bs-btn-active-bg: #25baba;
+    --bs-btn-active-border-color: #25baba;
+    --bs-btn-disabled-bg: #2acfcf;
+    --bs-btn-disabled-border-color: #2acfcf;
+    border-radius: 40px;
+    font-weight: 900;
+    color: white;
+}
+
+.call-to-action-container {
+    display: flex;
+    padding: 24px 0;
+    align-items: center;
+}
+
+.call-to-action-container h1 {
+    font-size: 72px;
+    font-weight: 900;
+}
+
+.call-to-action-container p {
+    font-size: 22px;
+    font-weight: 600;
+    color: hsl(0, 0%, 75%);
+}
+
+.shortening-container {
+    padding: 36px;
+    background-image: url("../images/bg-boost-desktop.svg");
+    background-color: hsl(257, 27%, 26%);
+    border-radius: 8px;
+}
+
+.links-container {
+    background-color: hsl(0, 0%, 75%);;
+    padding: 20px 0;
+}
+
+.link-card {
+    border-radius: 8px;
+    background-color: white;
+    padding: 16px;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    font-weight: 600;
+    flex: 1;
+}
+
+.link-short {
+    font-weight: 600;
+    color: #2acfcf;
+    text-align: right;
+    flex: 1;
+    margin-right: 12px;
+}
+
+.link-card button {
+    color: white;
+}

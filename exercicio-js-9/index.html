@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.svg" alt="Shortly">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resources</a>
+          </li>
+        </ul>
+        <div>
+          <button class="btn">Login</button>
+          <button class="btn btn-primary">Sign up</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-fluid">
+    <div class="container call-to-action-container">
+      <div class="textos">
+        <h1>More than just short links</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate perferendis, fuga sed est natus numquam iste vitae sunt veritatis quo beatae vel ex deserunt necessitatibus optio officiis quas maxime incidunt?</p>
+        <button class="btn btn-primary">Getting Starter!</button>
+      </div>
+      <img width="50%" src="images/illustration-working.svg" alt="Working">
+    </div>
+    <div class="container shortening-container">
+      <form class="row needs-validation" novalidate>
+        <div class="col-md-9">
+          <input type="text" class="form-control" id="link" required>
+          <div class="invalid-feedback">
+            Please add a link.
+          </div>
+        </div>
+        <button id="action" class="col-md-3 btn btn-primary" type="submit">Shorten it!</button>
+      </form>
+    </div>
+    <div class="links-container">
+      <div id="container" class="container">
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/Link.js"></script>
+  <script src="./js/LinkView.js"></script>
+  <script src="./js/LinkController.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
