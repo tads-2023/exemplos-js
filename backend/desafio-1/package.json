@@ -1,0 +1,22 @@
+{
+  "name": "backend-challenge-1",
+  "version": "1.0.0",
+  "description": "## Introdução",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb-memory-server": "^8.12.2",
+    "mongodb-memory-server-global": "^8.12.2",
+    "mongoose": "^7.0.5",
+    "nodemon": "^2.0.22"
+  }
+}

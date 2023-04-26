@@ -1,0 +1,5 @@
+openapi: 3.0.1
+info:
+  title: Back-en Challenge 2021
+  description: CRUD articles
+  version: '0.1'
