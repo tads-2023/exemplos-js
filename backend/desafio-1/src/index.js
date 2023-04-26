@@ -18,6 +18,7 @@ setup = async () => {
         app.get("/articles", async(req, res) => {
             let page = req.query.page || 1;
             const articles = await Article.find({}).skip(page*4-4).limit(4);
+            
             res.send(articles);
         });
 
@@ -25,6 +26,34 @@ setup = async () => {
             const article = await Article.findOne({_id: req.params.id});
             res.send(article)
         });
+
+        app.delete("/articles/:id", async(req, res) => {
+            const article = await Article.findOne({_id: req.params.id});
+            await article.deleteOne();
+            res.send("Removido");
+        });
+
+        app.put("/articles/:id", async(req, res) => {
+            const { 
+                featured, 
+                title, 
+                url, 
+                imageUrl, 
+                newsSite, 
+                summary, 
+                publishedAt
+            } = req.body;
+            const article = await Article.findOne({_id: req.params.id});
+            if(featured) { article.featured = featured }
+            if(title) { article.title = title }
+            if(url) { article.url = url }
+            if(imageUrl) { article.imageUrl = imageUrl }
+            if(newsSite) { article.newsSite = newsSite }
+            if(summary) { article.summary = summary }
+            if(publishedAt) { article.publishedAt = publishedAt }
+            await article.save();
+            res.send(article)
+        })
 
         app.post("/articles", async (req, res) => {
             const { 

@@ -1,5 +1,10 @@
 const mongoose = require("mongoose");
 
+const launchesAndEventsSchema = new mongoose.Schema({
+    provider: String
+});
+
+
 const articleSchema = new mongoose.Schema({
     featured: Boolean, 
     title: String, 
@@ -7,7 +12,9 @@ const articleSchema = new mongoose.Schema({
     imageUrl: String, 
     newsSite: String, 
     summary: String, 
-    publishedAt: Date
+    publishedAt: Date,
+    launches: [launchesAndEventsSchema],
+    events: [launchesAndEventsSchema]
 });
 
 const Article = mongoose.model("Article", articleSchema);
