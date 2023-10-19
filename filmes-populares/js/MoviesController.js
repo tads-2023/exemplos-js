@@ -6,14 +6,12 @@ class MoviesController {
     }
 
     init() {
-        this.repository.populares().then( (movies) => {
-            this.content.innerHTML = "";
-            movies.forEach( (movie) => {
-                let view = new MovieView(movie);
-                this.content.innerHTML += view.template();
-            })
-        }).catch((msg) => {
-            alert(msg)
-        });
+        this.content.innerHTML = "";
+        let i = 0;
+        while(i < 10) {
+            let view = new MovieView({});
+            this.content.innerHTML += view.template();
+            i += 1;
+        }
     }
 }

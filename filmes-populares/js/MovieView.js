@@ -6,13 +6,13 @@ class MovieView {
     template() {
         return `
         <div class="movie">
-            <img src="${this.movie.banerUrl}" alt="Banner">
+            <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/NNxYkU70HPurnNCSiCjYAmacwm.jpg" alt="Banner">
             <div class="score">
-                <span>${this.movie.avalicao}</span>
+                <span>7.7</span>
             </div>
             <div class="description">
-                <h2>${this.movie.titulo}</h2>
-                <span>${this.movie.lancamento}</span>
+                <h2>Mission: Impossible - Dead Reckoning Part One</h2>
+                <span>2023-07-08</span>
             </div>
         </div>
         `
